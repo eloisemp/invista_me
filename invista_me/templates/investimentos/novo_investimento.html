@@ -1,0 +1,24 @@
+{% extends 'investimentos/base.html' %}
+{% block conteudo %}
+{% load crispy_forms_tags %}
+
+
+<!-- Primeiro cod funcionando até a aula 12
+    <form action="{% url 'investimento_registrado' %}" method="POST">
+    {% csrf_token %}
+    <label for="">Tipo de Investiimento</label>
+    <input type="text" name='TipoInvestimento'>
+    <button type="submit">Salvar</button>
+</form>
+-->
+
+<div class="container">
+    <h1>Formulário Novo Investimento</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{formulario | crispy}}
+        <button type="submit" class="btn btn-success">Salvar</button>
+    </form>
+</div>
+
+{% endblock %}

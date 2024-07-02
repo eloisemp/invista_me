@@ -1,0 +1,2 @@
+terminal: django-admin createapp projeto_invista_me
+python manage.py startapp invista_me
